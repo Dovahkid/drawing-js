@@ -11,11 +11,11 @@ var shapeChoice = 'circle';
   var tool = new Tool();
   var drawToCanvas = event =>
   {
-    var pnt = new Point(             // This is only
+    let pnt = new Point(             // This is only
       event.point.x - (drawSize/2),  // used for the
       event.point.y - (drawSize/2)); // rectangle
 
-    var c = shapeChoice === 'circle' ?        // This is a ternary
+    let c = shapeChoice === 'circle' ?        // This is a ternary
       Shape.Circle(event.point, drawSize/2) : // operator to decide
       Shape.Rectangle(pnt, drawSize); // to draw rectangle or circle
 
@@ -104,8 +104,8 @@ function createPNG()
 {
   finClear();
 
-  var canvas = document.getElementById('mainCanvas');
-  var img = new Image();
+  let canvas = document.getElementById('mainCanvas');
+  let img = new Image();
   img.src = canvas.toDataURL();
   document.getElementById('imgLocation').innerHTML =
     "<a href='"+img.src+"' download><img src='"+img.src+"'></a>";
