@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>Learning JS</title>
+  <link rel="stylesheet" href="main.css">
+
+
+</head>
+<body>
+
+  <div id="mainContent">
+
+    <h1>Your Canvas</h1>
+
+    <canvas id="mainCanvas"></canvas>
+
+    <br>
+    <div class="section">
+      <span>Shape Picker</span>
+      <button onclick="shapeChoice = 'circle'">Circle</button>
+      <button onclick="shapeChoice = 'rectangle'">Rectangle</button>
+    </div>
+
+    <br>
+    <div class="section">
+      <span>Color Choice</span>
+      <button onclick="ColorPick('lb')" style="background:lightblue;">Light Blue</button>
+      <button onclick="ColorPick('lg')" style="background:lightgreen;">Light Green</button>
+      <button onclick="ColorPick('lr')" style="background:pink;">Light Red</button>
+      <button onclick="ColorPick('wh')" style="background:white;">White</button>
+      <button onclick="ColorPick('bl')" style="background:black; color:white;">Black</button>
+    </div>
+
+    <br>
+    <div class="section">
+      <span>Draw Size</span>
+      <button onclick="drawSizeSet(5)">5</button>
+      <button onclick="drawSizeSet(10)">10</button>
+      <button onclick="drawSizeSet(20)">20</button>
+      <button onclick="drawSizeSet(30)">30</button>
+      <button onclick="drawSizeSet(40)">40</button>
+    </div>
+
+    <br>
+    <div class="section">
+      <button onclick="prjClear()">Clear Canvas</button>
+      <button onclick="finClear()">Clear Finished</button>
+      <button onclick="createPNG()" download="img">Create PNG</button>
+    </div>
+
+  </div>
+
+  <div id="finArea">
+    <h1>Your Art <span id="imgInstructions"> Click image to download</span></h1>
+    <div id="imgLocation">
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.9.25/paper-full.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
